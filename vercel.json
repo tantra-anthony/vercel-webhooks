@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "vercel-webhook-manager",
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 10
+    }
+  },
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/install", "destination": "/api/install" },
+    { "source": "/remove", "destination": "/api/remove" },
+    { "source": "/webhooks", "destination": "/api/webhooks" }
+  ]
+}
